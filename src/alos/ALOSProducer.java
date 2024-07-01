@@ -16,7 +16,7 @@ public class ALOSProducer {
 
 	public static void main(String[] str) throws InterruptedException, IOException {
 
-		System.out.println("Starting ALOSProd ...");
+		System.out.println("Starting ALOProducer ...");
 
 		sendMessages();
 

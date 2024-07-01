@@ -12,7 +12,6 @@ public class AtMostOnceConsumer {
 	public static void main(String[] str) throws InterruptedException {
 
 		System.out.println("Starting  AtMostOnceConsumer ...");
-
 		execute();
 
 	}
@@ -34,7 +33,6 @@ public class AtMostOnceConsumer {
 		String consumeGroup = "cg1";
 		props.put("group.id", consumeGroup);
 
-		// Set this property to true, if auto commit should happen.
 		props.put("enable.auto.commit", "false");
 
 		props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");

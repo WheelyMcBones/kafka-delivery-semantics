@@ -8,14 +8,11 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import java.io.IOException;
 import java.util.Properties;
 
-/**
- * A sample client to produce a bunch of messages.
- */
 public class AMOSProducer {
 
 	public static void main(String[] str) throws InterruptedException, IOException {
 
-		System.out.println("Starting ProducerExample ...");
+		System.out.println("Starting AMOProducer ...");
 
 		sendMessages();
 
@@ -33,8 +30,6 @@ public class AMOSProducer {
 		Properties props = new Properties();
 		props.put("bootstrap.servers", "localhost:9092");
 		props.put("retries", 0);
-		// This property controls how much bytes the sender would wait to batch up the
-		// content before publishing to Kafka.
 		props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 		props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
