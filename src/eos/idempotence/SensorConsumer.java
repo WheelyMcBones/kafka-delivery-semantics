@@ -2,7 +2,6 @@ package eos.idempotence;
 
 import java.util.*;
 import org.apache.kafka.clients.consumer.*;
-import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.*;
 import java.sql.*;
 import java.time.Duration;
@@ -93,11 +92,9 @@ public class SensorConsumer {
 
 			psUpdate.setString(1, r.topic());
 			psUpdate.setInt(2, r.partition());
-<<<<<<< HEAD
 			
 			c.commitSync();
-=======
->>>>>>> 5eb41b176b1d4d1e520c472ecdb2715df2cf70c0
+
 
 			psInsert.executeUpdate();
 			psUpdate.executeUpdate();
